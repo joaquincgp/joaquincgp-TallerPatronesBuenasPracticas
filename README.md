@@ -48,3 +48,15 @@ Para resolver estos desafíos, se implementó una solución integral basada en t
 * ✅ **Código Mantenible**: Las responsabilidades están claramente definidas, haciendo el código más fácil de leer y depurar.
 * ✅ **Alta Extensibilidad**: El sistema está listo para crecer, permitiendo añadir nuevos modelos de vehículos sin riesgo.
 * ✅ **Preparado para el Futuro**: La transición a una base de datos real es ahora una tarea sencilla que no afectará la lógica de negocio.
+
+## Autor
+
+- **Diego Correa**
+- GitHub: [@DiegoCorrea07](https://github.com/DiegoCorrea07)
+
+---
+
+## Licencia
+
+Este proyecto está bajo licencia **MIT**.
+
