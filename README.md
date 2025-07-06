@@ -31,7 +31,7 @@ Para resolver estos desafíos, se implementó una solución integral basada en t
 ### Ejecución
 1.  **Clona el repositorio:**
     ```sh
-    git clone [https://github.com/DiegoCorrea07/DesignPatterns.git](https://github.com/DiegoCorrea07/DesignPatterns.git)
+    git clone [https://github.com/DiegoCorrea07/DesignPatterns.git](https://github.com/DiegoCorrea07/DesignPatterns.git).
     ```
 2.  **Accede al directorio:**
     ```sh
