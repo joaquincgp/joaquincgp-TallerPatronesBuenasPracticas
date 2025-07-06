@@ -1,6 +1,8 @@
-﻿using DesignPatterns.ModelBuilders;
+﻿using DesignPatterns.Factories;
+using DesignPatterns.ModelBuilders;
 using DesignPatterns.Models;
 using DesignPatterns.Repositories;
+using DisignPatterns.Factories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using System;
@@ -21,6 +23,21 @@ namespace DesignPatterns.Controllers
         {
             _vehicleRepository = vehicleRepository;
             _logger = logger;
+        }
+
+        private CarFactory chooseFactory(string vehicle)
+        {
+            switch (vehicle)
+            {
+                case "Mustang":
+                    return new FordMustangFactory();
+                case "Explorer":
+                    return new FordExplorerFactory();
+                case "Escape":
+                    return new FordEscapeFactory();
+                default:
+                    throw new NotImplementedException();
+            }
         }
 
         public IActionResult Index()
@@ -58,7 +75,8 @@ namespace DesignPatterns.Controllers
         [HttpGet]
         public IActionResult AddExplorer()
         {
-            _vehicleRepository.AddVehicle(new Car("red", "Ford", "Explorer"));
+            var carFactory = chooseFactory("Explorer");
+            _vehicleRepository.AddVehicle(carFactory.Create());
             return Redirect("/");
         }
 
