@@ -1,4 +1,5 @@
-﻿using DesignPatterns.Models;
+﻿using DesignPatterns.ModelBuilders;
+using DesignPatterns.Models;
 using DesignPatterns.Repositories;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -35,7 +36,22 @@ namespace DesignPatterns.Controllers
         [HttpGet]
         public IActionResult AddMustang()
         {
-            _vehicleRepository.AddVehicle(new Car("red","Ford","Mustang"));
+            var builder = new CarModelBuilder();
+            var newCar = builder.setModel("Mustang")
+                                .setBrand("Ford")
+                                .setColor("white")
+                                .Build();
+
+            var builder2 = new CarModelBuilder();
+            if(true)
+            {
+                builder2 = builder2.setModel("Mustang");
+                             
+            }
+
+            var car2 = builder2.Build();
+
+            _vehicleRepository.AddVehicle(newCar);
             return Redirect("/");
         }
 
