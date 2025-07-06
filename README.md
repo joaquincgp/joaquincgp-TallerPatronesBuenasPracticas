@@ -22,31 +22,6 @@ Para resolver estos desafíos, se implementó una solución integral basada en t
 
 3.  **Crecimiento sin Dolor con `Factory Method`**: Para preparar el sistema para el futuro, el patrón **Factory Method** nos permite definir una interfaz para crear vehículos, pero deja que las subclases decidan qué modelo específico instanciar. ¿Necesitamos agregar un "Ford Bronco"? Simplemente creamos una nueva fábrica para él, sin tocar el código existente.
 
-## Arquitectura Resultante
-
-La sinergia de estos patrones produce un flujo de trabajo desacoplado y eficiente:
-
-
-```text
-Petición del Usuario
-       |
-       v
-+------------------+      Usa una...      +--------------------+      Que usa un...      +-------------------+
-|  Controlador     |--------------------->| Fábrica de Modelo  |------------------------>| Constructor       |
-| (No sabe cómo    |                      | (Sabe qué crear)   |                         | (Sabe cómo armar) |
-| se crean los     |                      +--------------------+                         +-------------------+
-| vehículos)       |                                                                             |
-+------------------+                                                                             |
-       |                                                                                         v
-       | Guarda en...                                                                    +-------------------+
-       |                                                                                 | Objeto Vehículo   |
-       v                                                                                 | (Producto Final)  |
-+------------------+                                                                     +-------------------+
-|  Repositorio     |
-|  (Singleton)     |
-+------------------+
-
-
 
 ## Guía de Inicio Rápido
 
