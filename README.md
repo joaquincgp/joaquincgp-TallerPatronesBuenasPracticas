@@ -52,7 +52,7 @@ Para resolver estos desafíos, se implementó una solución integral basada en t
 ## Autor
 
 - **Joaquin Chacón**
-- GitHub: [@DiegoCorrea07](https://github.com/joaquincgp)
+- GitHub: [Perfil](https://github.com/joaquincgp)
 
 ---
 
