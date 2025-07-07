@@ -51,8 +51,8 @@ Para resolver estos desafíos, se implementó una solución integral basada en t
 
 ## Autor
 
-- **Diego Correa**
-- GitHub: [@DiegoCorrea07](https://github.com/DiegoCorrea07)
+- **Joaquin Chacón**
+- GitHub: [@DiegoCorrea07](https://github.com/joaquincgp)
 
 ---
 
